@@ -1,0 +1,28 @@
+formatting_task:
+  description: >
+    Analyze the user input {issue} and extract details into the following structured format:
+    device_type: "",
+    issue": ""
+    "Ensure this structure is passed correctly to the Network Troubleshooter.
+  expected_output: >
+    A structured JSON-like format containing the device type and issue details.
+  agent: input_formatter  
+
+troubleshooting_task:
+  description: >
+    Analyze the issue description to identify the network device name, device type, and extract only the commands explicitly mentioned by the user. Format the output to include the device name in the commands.
+    Return only the requested commands formatted in a JSON array.
+    Issue Description: {issue}
+  expected_output: >
+    An array of the requested CLI commands, like:
+    ["<Command 1>","<Command 2>"]
+  agent: network_troubleshooter
+
+#reporting_task:
+#  description: >
+#    Review the context you got and expand each topic into a full section for a report.
+#    Make sure the report is detailed and contains any and all relevant information.
+#  expected_output: >
+#    A fully fledged report with the main topics, each with a full section of information.
+#    Formatted as markdown without '```'
+#  agent: reporting_analyst

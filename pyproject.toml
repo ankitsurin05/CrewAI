@@ -1,0 +1,23 @@
+[project]
+name = "network_device"
+version = "0.1.0"
+description = "network_device using crewAI"
+authors = [{ name = "Your Name", email = "you@example.com" }]
+requires-python = ">=3.10,<3.13"
+dependencies = [
+    "crewai[tools]>=0.102.0,<1.0.0"
+]
+
+[project.scripts]
+network_device = "network_device.main:run"
+run_crew = "network_device.main:run"
+train = "network_device.main:train"
+replay = "network_device.main:replay"
+test = "network_device.main:test"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.crewai]
+type = "crew"

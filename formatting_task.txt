@@ -1,0 +1,6 @@
+```json
+{
+  "device_type": "Interface GigabitEthernet1/3 connected to switch IND-ND4-DEV-CORE-SW-01",
+  "issue": "Interface has gone down and reporting the value 2.0, placing the interface into critical state. Need show interface command and running configuration detail only for the interface."
+}
+```
